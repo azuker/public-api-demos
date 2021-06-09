@@ -1,0 +1,11 @@
+{
+  "name": "papi-nginx-demo",
+  "version": "0.0.0",
+  "scripts": {
+    "docker:build": "docker build -t papi-nginx-demo .",
+    "docker:run": "docker run -d --name papi-nginx-demo --env-file ./.env -p 3099:8090 papi-nginx-demo",
+    "docker:rm": "docker rm -f papi-nginx-demo || true",
+    "docker:logs": "docker logs -f --tail 100 papi-nginx-demo",
+    "docker:exec": "docker exec -it papi-nginx-demo sh"
+  }
+}
