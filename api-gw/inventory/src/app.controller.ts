@@ -1,4 +1,6 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Param, Req } from '@nestjs/common';
+import { Request } from 'express';
+import { verify } from './auth';
 
 import { data } from './data';
 import { Book } from './dtos';
@@ -11,7 +13,10 @@ export class AppController {
   }
 
   @Get(':title')
-  getBook(@Param('title') title: string): Book | undefined {
+  getBook(@Req() req: Request, @Param('title') title: string): Book | undefined {
+    const tokenPayload = verify(req);
+    console.log('Received verified call: ', tokenPayload);
+
     return data.books.find(b => b.title === title);
   }
 }
