@@ -1,4 +1,6 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Param, Req } from '@nestjs/common';
+import { Request } from 'express';
+import { verify } from './auth';
 
 import { data } from './data';
 import { Order } from './dtos';
@@ -11,7 +13,10 @@ export class AppController {
   }
 
   @Get(':id')
-  getOrder(@Param('id') id: string): Order | undefined {
+  getOrder(@Req() req: Request, @Param('id') id: string): Order | undefined {
+    const tokenPayload = verify(req);
+    console.log('Received verified call: ', tokenPayload);
+
     const orderId = +id;
     return data.orders.find(o => o.id === orderId);
   }
