@@ -4,7 +4,7 @@
   "scripts": {
     "docker:start": "npm run docker:rm && npm run docker:build && npm run docker:run && npm run docker:logs",
     "docker:build": "docker build -t papi-nginx-demo2 .",
-    "docker:run": "docker run -d --name papi-nginx-demo2 --env-file ./.env -p 3098:8090 papi-nginx-demo2",
+    "docker:run": "docker run -d --name papi-nginx-demo2 --network papi_demos --env-file ./.env -p 3098:8090 papi-nginx-demo2",
     "docker:rm": "docker rm -f papi-nginx-demo2 || true",
     "docker:logs": "docker logs -f --tail 100 papi-nginx-demo2",
     "docker:exec": "docker exec -it papi-nginx-demo2 sh"
