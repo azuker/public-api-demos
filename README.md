@@ -60,6 +60,7 @@ This repo contains demos for the purpose of my talk: "Will the Real Public API P
     - Generate bundle, slate markdown and postman collection: `npm run gen` in `spec/docs/spec`
     - Copy the generated files in `dist` folder to the docs by running `npm run copy` in `spec/docs/spec`
     - Launch slate docs app - `npm start` in `spec/docs/public-api-demos-node-slate`
+    - You should check the `ReDoc` project too (not present in this repo)
 
 ### Versioning
 

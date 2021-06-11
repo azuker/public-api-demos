@@ -11,11 +11,14 @@
     "copy": "npm run copy:slatemd && npm run copy:bundle && npm run copy:postman",
     "copy:slatemd": "copyfiles -u 1 dist/api.md ../public-api-demos-node-slate/source/includes",
     "copy:bundle": "copyfiles -u 1 dist/bundle.yaml ../public-api-demos-node-slate/source/assets",
-    "copy:postman": "copyfiles -u 1 dist/postman.json ../public-api-demos-node-slate/source/assets"
+    "copy:postman": "copyfiles -u 1 dist/postman.json ../public-api-demos-node-slate/source/assets",
+    "convert-bundle": "api-spec-converter --from=openapi_3 --to=openapi_3 --syntax=json dist/bundle.yaml > dist/bundle.json",
+    "gen:changes": "docker run --rm -t -v %CD%/_published:/specs1 -v %CD%/dist:/specs2 openapitools/openapi-diff:latest /specs1/bundle.yaml /specs2/bundle.yaml --text /specs2/diff-output.txt"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "api-spec-converter": "^2.12.0",
     "copyfiles": "^2.4.1",
     "openapi-to-postmanv2": "^2.7.0",
     "swagger-cli": "^4.0.4",
