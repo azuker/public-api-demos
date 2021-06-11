@@ -1,12 +1,12 @@
 const fetch = require('node-fetch');
 
 // directly:
-// const inventoryBaseUrl = 'http://localhost:3001';
-// const ordersBaseUrl = 'http://localhost:3002';
+const inventoryBaseUrl = 'http://localhost:3001';
+const ordersBaseUrl = 'http://localhost:3002';
 
 // nginx:
-const inventoryBaseUrl = 'http://localhost:3099';
-const ordersBaseUrl = 'http://localhost:3099';
+// const inventoryBaseUrl = 'http://localhost:3099';
+// const ordersBaseUrl = 'http://localhost:3099';
 
 function getToken(url) {
   return fetch(url, {
