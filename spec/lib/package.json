@@ -1,0 +1,14 @@
+{
+  "name": "lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gen": "openapi-generator-cli generate -o ts-axios -g typescript-axios -c ts-axios.json -i http://localhost:3010/openapi-json"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.3.3"
+  }
+}

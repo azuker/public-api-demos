@@ -1,0 +1,6 @@
+{
+  "supportsES6": true,
+  "npmName": "@fancybooks/fancybooks-axios-client",
+  "withInterfaces": true,
+  "stringEnums": true
+}
