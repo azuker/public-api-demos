@@ -1,0 +1,10 @@
+{
+  "language_tabs": ["shell", "javascript", "python", "go", "csharp", "java"],
+  "language_clients": [{"javascript": "fetch"}, {"csharp": "httpclient"}],
+  "verbose": true,
+  "search": false,
+  "customApiKeyValue": "30c050f7fdfe466b9442570ae77dbc8a",
+  "omitHeader": true,
+  "httpsnippet": true,
+  "resolve": false
+}

@@ -1,0 +1,24 @@
+{
+  "name": "spec",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gen": "npm run gen:bundle && npm run gen:slatemd && npm run gen:postman",
+    "gen:bundle": "swagger-cli bundle src/index.yaml --outfile dist/bundle.yaml --type yaml",
+    "gen:slatemd": "widdershins --environment widdershins.json -o dist/api.md -- dist/bundle.yaml",
+    "gen:postman": "openapi2postmanv2 -s dist/bundle.yaml -o dist/postman.json -p",
+    "copy": "npm run copy:slatemd && npm run copy:bundle && npm run copy:postman",
+    "copy:slatemd": "copyfiles -u 1 dist/api.md ../public-api-demos-node-slate/source/includes",
+    "copy:bundle": "copyfiles -u 1 dist/bundle.yaml ../public-api-demos-node-slate/source/assets",
+    "copy:postman": "copyfiles -u 1 dist/postman.json ../public-api-demos-node-slate/source/assets"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "openapi-to-postmanv2": "^2.7.0",
+    "swagger-cli": "^4.0.4",
+    "widdershins": "^4.0.1"
+  }
+}
