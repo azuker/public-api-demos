@@ -4,8 +4,6 @@ This repo contains demos for the purpose of my talk: "Will the Real Public API P
 
 ## Demos
 
-### API Gateway
-
 **Ports**:
 
 - Stupid auth: `3000`
@@ -13,6 +11,9 @@ This repo contains demos for the purpose of my talk: "Will the Real Public API P
 - Orders: `3002`
 - NGINX: `3099`
 - NGINX-API-KEY: `3098`
+- Books: `3010`
+
+### API Gateway
 
 **Demo List:**
 
@@ -51,8 +52,8 @@ This repo contains demos for the purpose of my talk: "Will the Real Public API P
     - View `http://localhost:3010/openapi-json` endpoint in browser
 1. Spec - Client-side Library Generation
     - Launch spec code books server in `spec/code/books`
-    - Generate library: `npm run gen` in `lib` folder
-    - Review code and usage demo is `lib/ts-axios/_demo.ts`
+    - Generate library: `npm run gen` in `spec/lib` folder
+    - Review code and usage demo is `spec/lib/ts-axios/_demo.ts`
 1. Spec - Docs
     - postman, code samples, widdershins
 
@@ -63,3 +64,5 @@ This repo contains demos for the purpose of my talk: "Will the Real Public API P
 1. Spec - Versioning
     - swagger validate (existing spec vs new)
     - release notes + breaking changes
+
+ASYNC API? (gen, docs, aadiff)
