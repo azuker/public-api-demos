@@ -67,7 +67,10 @@ This repo contains demos for the purpose of my talk: "Will the Real Public API P
 **Demo List:**
 
 1. Spec - Versioning
-    - swagger validate (existing spec vs new)
-    - release notes + breaking changes
+    - `spec/docs/spec/_published/bundle.yaml` represents the current published version
+    - `spec/docs/spec/dist/bundle.yaml` represents the current developed version
+    - We wish to compare both, summarize changes and validate compatibility
+    - Run `npm run changes` in `spec/docs/spec`
+    - Review diff-output files in `spec/docs/spec/dist`
 
 ASYNC API? (gen, docs, aadiff)

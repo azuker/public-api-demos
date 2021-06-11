@@ -37,17 +37,6 @@ paths:
                 $ref: '#/components/schemas/Pet'
         default:
           $ref: '#/components/responses/UnexpectedError'
-    post:
-      summary: Create
-      operationId: createPets
-      description: Create a pet
-      tags:
-        - pets
-      responses:
-        '201':
-          $ref: '#/components/responses/NullResponse'
-        default:
-          $ref: '#/components/responses/UnexpectedError'
   '/pets/{petId}':
     get:
       summary: Detail
@@ -71,7 +60,6 @@ components:
     petId:
       name: petId
       in: path
-      required: true
       description: The id of the pet to retrieve
       schema:
         type: string
