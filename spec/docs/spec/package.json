@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "gen": "npm run gen:bundle && npm run gen:slatemd && npm run gen:postman",
-    "gen:bundle": "swagger-cli bundle src/index.yaml --outfile dist/bundle.yaml --type yaml",
+    "gen:bundle": "swagger-cli bundle src/openapi.yaml --outfile dist/bundle.yaml --type yaml",
     "gen:slatemd": "widdershins --environment widdershins.json -o dist/api.md -- dist/bundle.yaml",
     "gen:postman": "openapi2postmanv2 -s dist/bundle.yaml -o dist/postman.json -p",
     "copy": "npm run copy:slatemd && npm run copy:bundle && npm run copy:postman",

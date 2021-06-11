@@ -45,6 +45,7 @@ This repo contains demos for the purpose of my talk: "Will the Real Public API P
     - Run `gen.cmd` (git bash: `./gen.cmd`)
     - Generates static docs, spa docs and nodejs server
     - nodejs-server: see that it loads swagger and validates as well (`index.js`)
+    - Review actual sample of spec brokwn down in `spec/docs/spec/src/openapi.yaml`
 1. Spec - Code
     - Folder: `spec/code/books`
     - Launch server
@@ -55,7 +56,7 @@ This repo contains demos for the purpose of my talk: "Will the Real Public API P
     - Generate library: `npm run gen` in `spec/lib` folder
     - Review code and usage demo is `spec/lib/ts-axios/_demo.ts`
 1. Spec - Docs
-    - If you can't see the node-slate source, make sure to downloadd submodules: `git submodule update --init --recursive`
+    - If you can't see the node-slate source, make sure to update submodules: `git submodule update --init --recursive`
     - Generate bundle, slate markdown and postman collection: `npm run gen` in `spec/docs/spec`
     - Copy the generated files in `dist` folder to the docs by running `npm run copy` in `spec/docs/spec`
     - Launch slate docs app - `npm start` in `spec/docs/public-api-demos-node-slate`
