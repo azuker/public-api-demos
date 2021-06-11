@@ -73,4 +73,12 @@ This repo contains demos for the purpose of my talk: "Will the Real Public API P
     - Run `npm run changes` in `spec/docs/spec`
     - Review diff-output files in `spec/docs/spec/dist`
 
-ASYNC API? (gen, docs, aadiff)
+
+### Async API
+
+1. Async API
+    - Sample spec in `asyncapi/asyncapi.json`
+    - Generate server: `npm run gen:server`
+    - Generate docs: `npm run gen:html` and `npm run gen:md`
+    - Can launch HTML docs: `npm start`
+    - Can compare changes with published version: `npm run changes` - not currently working, aadiff expects yaml possibly

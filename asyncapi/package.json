@@ -1,0 +1,30 @@
+{
+  "name": "asyncapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gen:server": "ag -p server=production asyncapi.json @asyncapi/nodejs-template -o ./nodejs-server --force-write",
+    "gen:html": "ag asyncapi.json @asyncapi/html-template -o ./docs/html --force-write",
+    "gen:md": "ag asyncapi.json @asyncapi/markdown-template -o ./docs/markdown --force-write",
+    "start": "http-server docs/html -o",
+    "changes": "node aadiff.js ./_published/asyncapi.json ./asyncapi.json md"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@asyncapi/generator": "^1.7.2",
+    "@asyncapi/html-template": "^0.18.1",
+    "@asyncapi/markdown-template": "^0.13.0",
+    "http-server": "^0.12.3",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "watch": "^1.0.2",
+    "@ads-vdh/md-diff": "^1.0.3",
+    "@asyncapi/parser": "^1.4.0",
+    "js-yaml": "^4.0.0",
+    "marked": "^2.0.1",
+    "remark": "^13.0.0",
+    "remark-toc": "^7.2.0"
+  }
+}
