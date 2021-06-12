@@ -1,0 +1,14 @@
+{
+  "name": "redocly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "openapi preview-docs -p 8888 bundle.yaml"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@redocly/openapi-cli": "^1.0.0-beta.50"
+  }
+}

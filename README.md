@@ -60,7 +60,9 @@ This repo contains demos for the purpose of my talk: "Will the Real Public API P
     - Generate bundle, slate markdown and postman collection: `npm run gen` in `spec/docs/spec`
     - Copy the generated files in `dist` folder to the docs by running `npm run copy` in `spec/docs/spec`
     - Launch slate docs app - `npm start` in `spec/docs/public-api-demos-node-slate`
-    - You should check the `ReDoc` project too (not present in this repo)
+    - Check ReDoc basic sample - `npm start` in `spec/docs/redoc`
+    - Check Redocly basic sample - `npm start` in `spec/docs/redocly`
+        - Can do many things, e.g. bundle, join, lint, login, logout, preview-docs, push, split, stats
 
 ### Versioning
 
@@ -73,7 +75,6 @@ This repo contains demos for the purpose of my talk: "Will the Real Public API P
     - We wish to compare both, summarize changes and validate compatibility
     - Run `npm run changes` in `spec/docs/spec`
     - Review diff-output files in `spec/docs/spec/dist`
-
 
 ### Async API
 

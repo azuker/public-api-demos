@@ -1,0 +1,14 @@
+{
+  "name": "redoc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "redoc-cli serve bundle.yaml"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "redoc-cli": "^0.12.1"
+  }
+}

@@ -8,9 +8,11 @@
     "gen:bundle": "swagger-cli bundle src/openapi.yaml --outfile dist/bundle.yaml --type yaml",
     "gen:slatemd": "widdershins --environment widdershins.json -o dist/api.md -- dist/bundle.yaml",
     "gen:postman": "openapi2postmanv2 -s dist/bundle.yaml -o dist/postman.json -p",
-    "copy": "npm run copy:slatemd && npm run copy:bundle && npm run copy:postman",
+    "copy": "npm run copy:slatemd && npm run copy:bundle1 && npm run copy:bundle2 && npm run copy:bundle3 && npm run copy:postman",
     "copy:slatemd": "copyfiles -u 1 dist/api.md ../public-api-demos-node-slate/source/includes",
-    "copy:bundle": "copyfiles -u 1 dist/bundle.yaml ../public-api-demos-node-slate/source/assets",
+    "copy:bundle1": "copyfiles -u 1 dist/bundle.yaml ../public-api-demos-node-slate/source/assets",
+    "copy:bundle2": "copyfiles -u 1 dist/bundle.yaml ../redoc",
+    "copy:bundle3": "copyfiles -u 1 dist/bundle.yaml ../redocly",
     "copy:postman": "copyfiles -u 1 dist/postman.json ../public-api-demos-node-slate/source/assets",
     "convert-bundle": "api-spec-converter --from=openapi_3 --to=openapi_3 --syntax=json dist/bundle.yaml > dist/bundle.json",
     "changes": "docker run --rm -t -v %CD%/_published:/specs1 -v %CD%/dist:/specs2 openapitools/openapi-diff:latest /specs1/bundle.yaml /specs2/bundle.yaml --text /specs2/diff-output.txt --html /specs2/diff-output.html --markdown /specs2/diff-output.md"
