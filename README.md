@@ -69,6 +69,7 @@ This repo contains demos for the purpose of my talk: "Will the Real Public API P
 1. Spec - Versioning
     - `spec/docs/spec/_published/bundle.yaml` represents the current published version
     - `spec/docs/spec/dist/bundle.yaml` represents the current developed version
+    - Chnages in local dev (dist/bundle): added create pet (non-breaking) and changed petId parameter to required (breaking)
     - We wish to compare both, summarize changes and validate compatibility
     - Run `npm run changes` in `spec/docs/spec`
     - Review diff-output files in `spec/docs/spec/dist`
