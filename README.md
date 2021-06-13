@@ -20,11 +20,11 @@ This repo contains demos for the purpose of my talk: "Will the Real Public API P
 1. NGINX as a simple API Gateway for routing purposes
     - Located in `api-gw` folder
     - Demo direct calls
-        - Start the projects: `inventory`, `orders`, `stupid-auth`
+        - Start the projects: `inventory`, `orders`, `stupid-auth` (`npm start` in `api-gw` folder)
         - Start the client with the direct addresses (look in the code) - `npm start`
         - See that it works, the client retrieves the token and calls the services directly
     - Demo calls via NGINX
-        - Start the projects: `inventory`, `orders`, `stupid-auth`
+        - Start the projects: `inventory`, `orders`, `stupid-auth` (`npm start` in `api-gw` folder)
         - Execute the NGINX container (`nginx` folder)
         - Start the client with the api-gw address (look in the code)
         - See that it works, the client retrieves the token and calls the services via the api-gw
@@ -45,7 +45,7 @@ This repo contains demos for the purpose of my talk: "Will the Real Public API P
     - Run `gen.cmd` (git bash: `./gen.cmd`)
     - Generates static docs, spa docs and nodejs server
     - nodejs-server: see that it loads swagger and validates as well (`index.js`)
-    - Review actual sample of spec brokwn down in `spec/docs/spec/src/openapi.yaml`
+    - Review actual sample of broken down spec in `spec/docs/spec/src/openapi.yaml`
 1. Spec - Code
     - Folder: `spec/code/books`
     - Launch server

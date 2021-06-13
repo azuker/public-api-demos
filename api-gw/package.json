@@ -1,0 +1,17 @@
+{
+  "name": "api-gw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently -p time --kill-others \"npm:start:*\"",
+    "start:inventory": "cd inventory && npm start",
+    "start:orders": "cd orders && npm start",
+    "start:stupid-auth": "cd stupid-auth && npm start"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.2.0"
+  }
+}

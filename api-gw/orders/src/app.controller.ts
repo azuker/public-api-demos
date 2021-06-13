@@ -15,7 +15,7 @@ export class AppController {
   @Get(':id')
   getOrder(@Req() req: Request, @Param('id') id: string): Order | undefined {
     const tokenPayload = verify(req);
-    console.log('Received verified call: ', tokenPayload);
+    console.log('[Orders] Received verified call: ', tokenPayload);
 
     const orderId = +id;
     return data.orders.find(o => o.id === orderId);

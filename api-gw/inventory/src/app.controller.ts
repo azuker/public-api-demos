@@ -15,7 +15,7 @@ export class AppController {
   @Get(':title')
   getBook(@Req() req: Request, @Param('title') title: string): Book | undefined {
     const tokenPayload = verify(req);
-    console.log('Received verified call: ', tokenPayload);
+    console.log('[Inventory] Received verified call: ', tokenPayload);
 
     return data.books.find(b => b.title === title);
   }
