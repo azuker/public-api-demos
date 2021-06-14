@@ -1,0 +1,324 @@
+{
+    "item": [
+        {
+            "id": "a5c0f578-5e4c-48f1-ac79-b33bea6cc44d",
+            "name": "pets",
+            "item": [
+                {
+                    "id": "89b062a6-0c65-4c9b-9736-1d7526fb2d63",
+                    "name": "List",
+                    "request": {
+                        "name": "List",
+                        "description": {
+                            "content": "List all pets",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "pets"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [
+                                {
+                                    "disabled": false,
+                                    "key": "limit",
+                                    "value": "<integer>",
+                                    "description": "How many items to return at one time (max 100)"
+                                }
+                            ],
+                            "variable": []
+                        },
+                        "method": "GET",
+                        "auth": null
+                    },
+                    "response": [
+                        {
+                            "id": "ed47fb8c-6a27-4ab2-99c3-c1ffe2abf33f",
+                            "name": "A paged array of pets",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "pets"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "limit",
+                                            "value": "<integer>"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "disabled": false,
+                                    "description": "A link to the next page of responses",
+                                    "key": "x-next",
+                                    "value": "eiusmod proident "
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n \"id\": 87388018,\n \"name\": \"in proident magna\",\n \"tag\": \"qui laborum o\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "c05b6ae8-fcb6-4408-ab7b-c5386d66c147",
+                            "name": "unexpected error",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "pets"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "limit",
+                                            "value": "<integer>"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n \"code\": -42509903,\n \"message\": \"labore sint\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        }
+                    ],
+                    "event": []
+                },
+                {
+                    "id": "beaac729-ab6d-4f28-a896-dadc2b0e07fe",
+                    "name": "Create",
+                    "request": {
+                        "name": "Create",
+                        "description": {
+                            "content": "Create a pet",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "pets"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "method": "POST",
+                        "auth": null
+                    },
+                    "response": [
+                        {
+                            "id": "7dae247e-3d07-49f6-9765-10b27083f18f",
+                            "name": "Null response",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "pets"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "method": "POST",
+                                "body": {}
+                            },
+                            "status": "Created",
+                            "code": 201,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "text/plain"
+                                }
+                            ],
+                            "body": "",
+                            "cookie": [],
+                            "_postman_previewlanguage": "text"
+                        },
+                        {
+                            "id": "fb7b105a-ba00-44a4-a772-7f470ca1e143",
+                            "name": "unexpected error",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "pets"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "method": "POST",
+                                "body": {}
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n \"code\": -42509903,\n \"message\": \"labore sint\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        }
+                    ],
+                    "event": []
+                },
+                {
+                    "id": "4fdbbaf8-0cbc-45b2-9a78-012c9909517d",
+                    "name": "Detail",
+                    "request": {
+                        "name": "Detail",
+                        "description": {
+                            "content": "Info for a specific pet",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "pets",
+                                ":petId"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": [
+                                {
+                                    "disabled": false,
+                                    "type": "any",
+                                    "value": "<string>",
+                                    "key": "petId",
+                                    "description": "(Required) The id of the pet to retrieve"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "auth": null
+                    },
+                    "response": [
+                        {
+                            "id": "b8383532-d6ff-4eb0-8b46-5064b6d4080e",
+                            "name": "Expected response to a valid request",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "pets",
+                                        ":petId"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "petId"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n \"id\": 87388018,\n \"name\": \"in proident magna\",\n \"tag\": \"qui laborum o\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "2141ce53-3ccf-4556-bad1-2aae68e88cdb",
+                            "name": "unexpected error",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "pets",
+                                        ":petId"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "petId"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n \"code\": -42509903,\n \"message\": \"labore sint\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        }
+                    ],
+                    "event": []
+                }
+            ],
+            "event": []
+        }
+    ],
+    "event": [],
+    "variable": [
+        {
+            "type": "string",
+            "value": "http://petstore.swagger.io/v1",
+            "key": "baseUrl"
+        }
+    ],
+    "info": {
+        "_postman_id": "6bf896ef-6964-4a27-a0a7-3786a22257ed",
+        "name": "Swagger Petstore",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": {
+            "content": "Multi-file boilerplate for OpenAPI Specification.\n\nContact Support:\n Name: API Support\n Email: support@example.com",
+            "type": "text/plain"
+        }
+    }
+}
