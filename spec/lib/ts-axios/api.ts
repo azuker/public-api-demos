@@ -198,7 +198,9 @@ export const BooksApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getBookByTitle(title: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Book>> {
+        async getBookByTitle(title: string, options?: any):
+            Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Book>> {
+
             const localVarAxiosArgs = await localVarAxiosParamCreator.getBookByTitle(title, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },

@@ -44,3 +44,5 @@ function introspectApiKey(r) {
     }
   );
 }
+
+export default introspectApiKey;

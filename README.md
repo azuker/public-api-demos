@@ -62,7 +62,7 @@ This repo contains demos for the purpose of my talk: "Will the Real Public API P
     - Launch slate docs app - `npm start` in `spec/docs/public-api-demos-node-slate`
     - Check ReDoc basic sample - `npm start` in `spec/docs/redoc`
     - Check Redocly basic sample - `npm start` in `spec/docs/redocly`
-        - Can do many things, e.g. bundle, join, lint, login, logout, preview-docs, push, split, stats
+        - Can do [many things](https://redocly.com/docs/cli/commands/), e.g. bundle, join, lint, login, logout, preview-docs, push, split, stats
 
 ### Versioning
 
@@ -71,7 +71,7 @@ This repo contains demos for the purpose of my talk: "Will the Real Public API P
 1. Spec - Versioning
     - `spec/docs/spec/_published/bundle.yaml` represents the current published version
     - `spec/docs/spec/dist/bundle.yaml` represents the current developed version
-    - Chnages in local dev (dist/bundle): added create pet (non-breaking) and changed petId parameter to required (breaking)
+    - Changes in local dev (`dist/bundle.yaml`): added create pet (non-breaking) and changed petId parameter to required (breaking)
     - We wish to compare both, summarize changes and validate compatibility
     - Run `npm run changes` in `spec/docs/spec`
     - Review diff-output files in `spec/docs/spec/dist`

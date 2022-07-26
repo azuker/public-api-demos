@@ -1,4 +1,5 @@
-import { Book, BooksApi } from './api';
+// npm i @fancybooks/fancybooks-axios-client
+import { Book, BooksApi } from './api'; // @fancybooks/fancybooks-axios-client
 
 async function demo() {
   const p = new BooksApi();
